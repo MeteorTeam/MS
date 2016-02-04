@@ -13,7 +13,7 @@ var app = express();
 app.set('port', process.env.PORT || 5555)
 
 // setup middlewares
-app.use(express.static(path.join(__dirname, 'public'), {index: false}));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // setup rooutes
 require('./routes/register-routes')(app);
