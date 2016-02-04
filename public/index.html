@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app='msApp'>
+  <head>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/header.css'>
+    <link rel="stylesheet" href='/css/main.css'>
+    <link rel="shortcut icon" href="/css/assets/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <title>MS</title>
+  </head>
+  <body>
+    <header ng-controller='headerCtrl'>
+
+      <section class="ms-main-header">
+        <nav>
+          <ul class='ms-main-header'>
+            <li class='ms-main-header-first'><a href="#" class='ms-main-header'>explore</a></li>
+            <li class='ms-main-header-second'><a href="#" class='ms-main-header'>your space</a></li>
+            <hr class='ms-main-header'>
+          </ul>
+      </nav>
+        <div class='ms-main-header-logo'>M.S</div>
+        <h3 class='ms-main-header'>
+          stop reinventing the wheel. explore friends' designs.
+        </h3>
+        <input class='ms-main-header' type="text" name="search" value="">
+      </section>
+
+    </header>
+
+    <script src="scripts/plugins/angular/angular.js"></script>
+    <script src="scripts/app.js"></script>
+
+  </body>
+
+</html>

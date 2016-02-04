@@ -1,0 +1,22 @@
+{
+  "name": "ms",
+  "version": "1.0.0",
+  "description": "ms application",
+  "main": "server.js",
+  "scripts": {
+    "test": "gulp test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "meteorgit"
+  },
+  "keywords": [
+    "-"
+  ],
+  "author": "The Meteor Team",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
