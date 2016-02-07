@@ -2,15 +2,11 @@
     font-family: LatoBlack;
     src: url(./assets/fonts/Lato-Black.woff);
 }
-<<<<<<< 3c77fa90ddde5df7d6999e30a559a08f41c0fc94
-section.ms-main-header {
-=======
 
 section.ms-header {
   position: relative;
   height: 300px;
   width: 100%;
->>>>>>> set header according to specs
   margin: 0 auto;
   background-color: #7B3830;
   border: 0px;

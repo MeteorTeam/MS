@@ -1,4 +1,3 @@
-<<<<<<< 3c77fa90ddde5df7d6999e30a559a08f41c0fc94
 .pin{
     border: 5px solid black;
     background-color: red;
@@ -6,7 +5,7 @@
     width: 270px;
     margin: 10px auto 0;
 }
-=======
+
 .ms-main {
   height:2000px;
   background: grey;
@@ -19,4 +18,3 @@
 .hidden {
   display: none;
 }
->>>>>>> set header according to specs
