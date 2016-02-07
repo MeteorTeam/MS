@@ -2,34 +2,41 @@
 <html ng-app='msApp'>
   <head>
     <meta charset='utf-8'>
+<<<<<<< 3c77fa90ddde5df7d6999e30a559a08f41c0fc94
     <link rel="stylesheet" href='/css/normalize.css'>
     <link href='/css/lib/bootstrap.min.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href='/css/header.css'>
     <link rel="stylesheet" href='/css/main.css'>
     <link rel="shortcut icon" href="/css/assets/favicon.ico">
+=======
+    <link rel='stylesheet' href='/css/normalize.css'>
+    <link rel='stylesheet' href='/css/header.css'>
+    <link rel='stylesheet' href='/css/main.css'>
+    <link rel='shortcut icon' href='/css/assets/favicon.ico'>
+>>>>>>> set header according to specs
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <title>MS</title>
   </head>
   <body>
+
     <header ng-controller='headerCtrl'>
-
-      <section class="ms-main-header">
-        <nav>
-          <ul class='ms-main-header'>
-            <li class='ms-main-header-first'><a href="#" class='ms-main-header'>explore</a></li>
-            <li class='ms-main-header-second'><a href="#" class='ms-main-header'>your space</a></li>
-            <hr class='ms-main-header'>
+      <section class='ms-header' ng-class="{'ms-header-sticky' : shrinkTopHeader}">
+        <nav class='ms-header'>
+          <ul class='ms-header'>
+            <li class='ms-header-first'><a href='#' class='ms-header' ng-click='setMainView("explore")'>explore</a></li>
+            <li class='ms-header-second'><a href='#' class='ms-header' ng-click='setMainView("yourSpace")'>your space</a></li>
+            <hr class='ms-header' ng-class="(mainViewSelector === 'explore') ? 'underline-first' : 'underline-second'">
           </ul>
-      </nav>
-        <div class='ms-main-header-logo'>M.S</div>
-        <h3 class='ms-main-header'>
-          stop reinventing the wheel. explore friends' designs.
+       </nav>
+        <div class='ms-header-logo' ng-class="{'ms-header-logo-sticky' : shrinkTopHeader}">M.S</div>
+        <h3 class='ms-header' ng-class="{'ms-header-sticky' : shrinkTopHeader}">
+          {{ headerText[mainViewSelector] }}
         </h3>
-        <input class='ms-main-header' type="text" name="search" value="">
+        <input class='ms-header' ng-class="{'ms-header-sticky' : shrinkTopHeader}" type='text' name='search' value=''>
       </section>
-
     </header>
 
+<<<<<<< 3c77fa90ddde5df7d6999e30a559a08f41c0fc94
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-sm-6">
@@ -55,6 +62,19 @@
 
     <script src="scripts/plugins/angular/angular.js"></script>
     <script src="scripts/app.js"></script>
+=======
+    <main class='ms-main'>
+      <section class='ms-main-explore hidden'>
+          <h1 class='ms-main-explore'>This is explore view</h1>
+      </section>
+      <section class='ms-main-your-space hidden'>
+          <h1>This is your space view</h1>
+      </section>
+    </main>
+
+    <script src='scripts/plugins/angular/angular.js'></script>
+    <script src='scripts/app.js'></script>
+>>>>>>> set header according to specs
 
   </body>
 

@@ -1,84 +1,170 @@
-body {
-  font-family: Lato;
-  color: #fff;
+@font-face {
+    font-family: LatoBlack;
+    src: url(./assets/fonts/Lato-Black.woff);
 }
+<<<<<<< 3c77fa90ddde5df7d6999e30a559a08f41c0fc94
 section.ms-main-header {
+=======
+
+section.ms-header {
+  position: relative;
+  height: 300px;
+  width: 100%;
+>>>>>>> set header according to specs
   margin: 0 auto;
   background-color: #7B3830;
   border: 0px;
-
-  color: white;
+  font-family: LatoBlack;
+  color: #fff;
   align-content: center;
   padding-bottom: 10px;
   user-select: none;
-
-}
-ul.ms-main-header {
-  position: relative;
-  left: 83%;
-  padding-right: 50px;
+  transition: all 0.4s ease;
 }
 
-ul.ms-main-header li {
+section.ms-header-sticky {
+  position: fixed;
+  top: 0px;
+  height: 100px;
+}
+
+nav.ms-header {
+  position: absolute;
+  right: 20px;
+  margin-top: 20px;
+}
+
+nav.ms-header li {
   display: inline;
   text-align: center;
 }
 
- a.ms-main-header {
-  display: inline-block;
-  width: 7%;
-  padding: .75rem 0;
-  margin: 0;
-  text-decoration: none;
-  color: white;
+ul.ms-header {
+  padding: 0px;
+  margin: 0px;
+}
+
+ a.ms-header {
+  color: #fff;
   font-size: 24px;
-
+  padding: 10px 0;
+  display: inline-block;
+  margin-right: 30px;
+  margin-left: 0px;
+  text-decoration: none;
+  outline: 0;
 }
 
-.ms-main-header-second:hover ~ hr {
-  margin-left: 7%;
-  width: 130px;
+.ms-header-second:hover ~ hr.ms-header {
+  margin-left: 42%;
+  width: 125px;
 }
 
-hr.ms-main-header {
-
-  height: 4px;
+.ms-header-first:hover ~ hr.ms-header {
+  margin-left: 0px;
   width: 90px;
-  left: 2px;
+}
+
+hr.ms-header {
+  height: 4px;
   margin: 0;
-  margin-left: 20px;
   background: white;
   border: none;
   transition: .3s ease-in-out;
+  width: 90px;
 }
 
-.ms-main-header-logo {
-  width: 200px;
+hr.underline-first {
+  margin-left: 0px;
+  width: 90px;
+}
+
+hr.underline-second {
+  margin-left: 42%;
+  width: 125px;
+}
+
+@keyframes moveLogo {
+  10% {
+    opacity: 0;
+    margin-top: -150px;
+  }
+
+  50% {
+    margin-left: 20px;
+    opacity: 1;
+  }
+
+  100% {
+      margin: 20px 0px 7px 20px;
+  }
+}
+
+.ms-header-logo {
+  position: absolute;
+  margin: 60px auto 35px auto;
+  padding: 7px 10px;
+  left: 0px;
+  right: 0px;
   height: 50px;
+  width: 200px;
+  border: 3px solid white;
   font-size: 48px;
   line-height: 50px;
-  border: 3px solid white;
-  margin: 60px auto 35px auto;
   text-align: center;
 }
 
-h3.ms-main-header {
-  text-align:  center;
-  font-size: 28px;
-  margin: 0 auto 25px auto;
+.ms-header-logo-sticky {
+  animation: moveLogo 0.4s ease;
+  animation-fill-mode: forwards;
 }
 
-input.ms-main-header {
-  font-family: arial;
+.ms-header-logo-sticky-reverse {
+  animation: moveLogo 0.4s ease;
+  animation-fill-mode: reverse;
+}
+
+h3.ms-header {
+  opacity: 1;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  font-size: 28px;
+  text-align: center;
+  margin: 150px auto 25px auto;
+  transition: all 0.4s ease;
+}
+
+h3.ms-header-sticky {
+  opacity: 0;
+  /*margin: 75px auto 25px auto;*/
+  transform: translateY(-170px);
+}
+
+input.ms-header {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  height: 35px;
+  width: 656px;
+  font-family: Arial;
   font-size: 20px;
   color: #797979;
   direction: rtl;
-  height: 35px;
-  width: 656px;
-  margin: 0px auto 25px auto;
+  margin: 209px auto 25px auto; /*In order to match 25px distance from searchbox*/
   display: block;
+  transition: all 0.4s ease;
 }
 
-input.ms-main-header:focus{
+input.ms-header:focus{
   box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+input.ms-header-sticky {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  height: 35px;
+  margin: 35px auto 35px auto; /*In order to match 25px distance from searchbox*/
+  display: block;
 }
