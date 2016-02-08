@@ -1,4 +1,4 @@
-.pin{
+.pin {
     border: 5px solid black;
     background-color: red;
     height: 265px;
@@ -7,8 +7,7 @@
 }
 
 .ms-main {
-  height:2000px;
-  background: grey;
+  height:1000px;
 }
 
 .ms-main-explore {

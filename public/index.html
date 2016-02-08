@@ -15,7 +15,7 @@
 
     <header ng-controller='headerCtrl'>
       <section class='ms-header' ng-class="{'ms-header-sticky' : shrinkTopHeader}">
-        <nav class='ms-header'>
+        <nav class='ms-header' ng-class="{'ms-header-sticky' : shrinkTopHeader}">
           <ul class='ms-header'>
             <li class='ms-header-first'><a href='#' class='ms-header' ng-click='setMainView("explore")'>explore</a></li>
             <li class='ms-header-second'><a href='#' class='ms-header' ng-click='setMainView("yourSpace")'>your space</a></li>
@@ -26,10 +26,14 @@
         <h3 class='ms-header' ng-class="{'ms-header-sticky' : shrinkTopHeader}">
           {{ headerText[mainViewSelector] }}
         </h3>
-        <input class='ms-header' ng-class="{'ms-header-sticky' : shrinkTopHeader}" type='text' name='search' value=''>
+        <form>
+          <input class='ms-header search-box-window' ng-class="{'ms-header-sticky' : shrinkTopHeader}" type='search' name='search' value=''>
+        </form>
+      </section>
+      <section class='ms-header-spacer-when-sticky' ng-class="{'hidden' : !shrinkTopHeader}">
       </section>
     </header>
-
+  <main class='ms-main' ng-controller='mainCtrl'>
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-sm-6">
@@ -52,6 +56,7 @@
             </div>
         </div>
     </div>
+  </main>
 <!--
     <main class='ms-main'>
       <section class='ms-main-explore hidden'>
